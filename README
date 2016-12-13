@@ -1,0 +1,12 @@
+# Author: Erik Clarke
+# Date: 2016-12-13
+
+This is a test database for Kraken. It contains exactly one sequence, the genome
+of Adeno-associated virus 1 (NC_002077).  These are the commands used to build
+it:
+
+kraken-build --db mindb --add-to-library NC_002077.fna
+kraken-build --db mindb --download-taxonomy
+kraken-build --db mindb --build --kmer-len 16 --minimizer-len 3
+kraken-build --db mindb --clean
+
